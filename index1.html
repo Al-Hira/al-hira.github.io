@@ -358,7 +358,7 @@
 
                     if (timeLeft === 0) {
                         onTimesUp();
-                        window.location.replace("index.html")
+                       
                     }
                 }, 1000);
             }
@@ -419,24 +419,24 @@
 
             if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(type) && isNotEmpty(time) && isNotEmpty(date) && isNotEmpty(number)) {
                 $.ajax({
-                    url: 'sendEmail.php',
-                    method: 'POST',
+                   
+                     method: form.method,
                     dataType: 'json',
-                    data: {
-                        name: name.val(),
-                        email: email.val(),
-                        type: type.val(),
-                        time: time.val(),
-                        date: date.val(),
-                        number: number.val()
-                    },
-                    success: function(response) {
-                        $('#myForm')[0].reset();
-                        // $('.sent-notification').text("Message Sent Successfully.");
-                        alert("Message Sent Successfully.");
-                    }
+                     body: data,
+                     headers: {
+            'Accept': 'application/json'
+        }
+                    
+                    
                 });
+            .then(response => {
+        alert("Message Sent Successfully.");
+        form.reset()
             }
+                    });.catch(error => {
+                  alert("Oops! There was a problem submitting your form");
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
         }
 
         function isNotEmpty(caller) {
@@ -448,6 +448,7 @@
 
             return true;
         }
+            form.addEventListener("submit", handleSubmit)
     </script>
 
     <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>

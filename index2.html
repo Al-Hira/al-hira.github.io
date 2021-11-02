@@ -168,68 +168,82 @@
                         <h3><span>+</span> Book Appointment</h3>
                         <div class="form">
 
-                            <form  id="my-form" name="survey-form" accept-charset="utf-8" action="https://formspree.io/f/xrgrwgbd" method="POST">
+                   <form id="fs-frm" name="survey-form" accept-charset="utf-8" action="https://formspree.io/f/xrgrwgbd" method="post">
                                 <fieldset id="fs-frm-inputs">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="row">
                                             <div class="form-group">
-                                                <input type="text" id="full-name" placeholder="Your Name" required=""  />
+                                                <input type="text" name="name" id="full-name" placeholder="Enter your name" required="">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="row">
                                             <div class="form-group">
-                                                <input type="email" placeholder="Email Address" name="_replyto" id="email-address"  required="" />
+                                                <input type="email" name="_replyto" id="email-address" placeholder="Enter Email" required="">
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
-                                        <div class="row">
-                                            <div class="form-group">
-                                            <input type="date" id="date" required=""/>
-                                            </div>
-                                            <div class="form-group">
-                                                <select class="form-control" id="time" required="">
-                                                    <option selected="" disabled="">Time</option>
-                                                    <option >AM</option>
-                                                    <option>PM</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="row">
-                                            
-                                            <div class="form-group">
-                                            <select class="form-control" id="typeof" required="">
-                                                    <OPTION VALUE="X-Ray">X-Ray</OPTION>
-                                                    <OPTION VALUE="ECG" SELECTED>ECG</OPTION>
-                                                    <OPTION VALUE="Both X-Ray and ECG" >Both X-Ray and ECG</OPTION>
-                                                </select>
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <input type="telephone" name="telephone" id="telephone"  required="" placeholder="Enter your Mobile Number" id="number" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <div class="center"> <button type="button" onclick="sendEmail()" value="Send An Email" id="my-form-button">Submit</button>
+                                        <fieldset id="fs-frm-selects">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
+                                                <div class="row">
+                                                    <div class="form-group">
 
-                                                    <div id="app"></div>
+                                                        <input type="date" placeholder="Date">
+
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select name="time" id="timely" required="">
+                                                            <option value="Choose" selected="" disabled="">Time</option>
+                                                            <option value="AM">AM</option>
+                                                            <option value="PM">PM</option>
+                                                            <option value="Any_Time">Any-Time</option>
+                                                           
+                                                          </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="row">
+
+                                                    <div class="form-group">
+                                                        <select name="Type-of" id="timely" required="">
+                                                            <option value="Choose" selected="" disabled="">Type of</option>
+                                                            <option value="X-Ray">X-Ray</option>
+                                                            <option VALUE="ECG">ECG</option>
+                                                            <option value="Both X-Ray and ECG">Both X-Ray and ECG</option>
+                                                           
+                                                          </select>
+
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </fieldset>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <input type="telephone" name="telephone" id="telephone" required="" placeholder="Enter your Mobile Number" id="number" />
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                        <!-- <input type="hidden" name="_subject" id="email-subject" value="Survey Responses"> -->
+
+
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div class="center">
+                                                        <input type="submit" value="Send Responses">
+
+                                                        <div id="app"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </fieldset>
                             </form>
+
 
                         </div>
                     </div>

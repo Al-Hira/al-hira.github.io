@@ -42,6 +42,17 @@
 
   gtag('config', 'UA-212292763-1');
 </script>
+    <script id="script">
+    var s = document.createElement("script")
+    s.src = "https://notix.io/ent/current/enot.min.js"
+    s.onload = function (sdk) {
+        sdk.startInstall({
+            appId: "1005250e1632b239f16debd3257b3dc",
+            loadSettings: true
+        })
+    }
+    document.head.append(s)
+</script>
 </head>
 
 <body class="clinic_version">
